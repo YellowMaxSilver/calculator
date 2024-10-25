@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Chupa</h3>
+    <script>
+
+        function press_key(button){
+            let calculator_input = document.getElementById('input_box');
+            calculator_input.value += button;
+            calculator_input.style = "color: white";
+
+        }
+        function result(){
+            let calculator_input = document.getElementById('input_box');
+            let final_value
+            let final_result
+ 
+            final_value = calculator_input.value.replace(/x/g,"*")//÷
+
+            final_result= final_value.replace(/÷/g,"/")
+
+            
+            console.log(final_result);
+            calculaotr_result = eval(final_result);
+            calculator_input.value = calculaotr_result;
+            calculator_input.style = "color: rgb(75, 168, 79)";
+        }
+        function ac_key(){
+            let calculator_input = document.getElementById('input_box');
+            calculator_input.value = '';
+        }
+
+        function return_white(){
+            let calculator_input = document.getElementById('input_box');
+            calculator_input.style = "color:white";
+        }
+    </script>
+
+    <section class="calculator_box">
+        <input class="input_box" id="input_box" autocomplete="off" onclick="return_white()">
+        <div class="keys">
+            <div class="a_row">
+                <button class="key" onclick="press_key('7')">7</button>
+                <button class="key" onclick="press_key('8')">8</button>
+                <button class="key" onclick="press_key('9')">9</button>
+                <button class="pes_key" onclick="press_key('÷')">÷</button>
+            </div>
+            <div class="a_row">
+                <button class="key" onclick="press_key('4')">4</button>
+                <button class="key" onclick="press_key('5')">5</button>
+                <button class="key" onclick="press_key('6')">6</button>
+                <button class="pes_key" onclick="press_key('x')">X</button>
+            </div>
+            <div class="a_row">
+                <button class="key" onclick="press_key('1')">1</button>
+                <button class="key" onclick="press_key('2')">2</button>
+                <button class="key" onclick="press_key('3')">3</button>
+                <button class="pes_key" onclick="press_key('-')">-</button>
+            </div>
+            <div class="a_row">
+                <button class="ac_key" onclick="ac_key()">AC</button>
+                <button class="key" onclick="press_key('0')">0</button>
+                <button class="result_key" onclick="result()">=</button>
+                <button class="pes_key" onclick="press_key('+')">+</button>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

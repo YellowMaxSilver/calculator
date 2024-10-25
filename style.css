@@ -1,0 +1,157 @@
+@keyframes button_hover {
+    0%{background-color: rgb(143, 143, 143);}
+    100%{background-color: rgb(95, 95, 95);}
+}
+
+@keyframes button_inhover {
+    0%{background-color: rgb(95, 95, 95);}
+    100%{background-color: rgb(143, 143, 143);}
+}
+
+@keyframes pes_button_hover {
+    0%{background-color: rgb(0, 95, 5);}
+    100%{background-color: rgb(0, 73, 4);}
+}
+
+@keyframes pes_button_inhover {
+    0%{background-color: rgb(0, 73, 4);}
+    100%{background-color: rgb(0, 95, 5);}
+}
+
+@keyframes result_button_hover {
+    0%{background-color: rgb(0, 73, 95);}
+    100%{background-color: rgb(0, 56, 73);}
+}
+
+@keyframes result_button_inhover {
+    0%{background-color: rgb(0, 56, 73);}
+    100%{background-color: rgb(0, 73, 95);}
+}
+
+@keyframes ac_button_hover {
+    0%{background-color: rgb(255, 72, 72);}
+    100%{background-color: rgb(209, 56, 56);}
+}
+
+@keyframes ac_button_inhover {
+    0%{background-color: rgb(209, 56, 56);}
+    100%{background-color: rgb(255, 72, 72);}
+}
+
+
+
+:root{
+    --back_color: rgb(41, 41, 41); 
+}
+
+.calculator_box{
+    width: 350px;
+    background-color: var(--back_color);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a_row{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.key{
+    width: 70px;height: 70px;
+    font-size: 30px;
+    border-radius: 70px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    border: 0px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    animation-name: in_hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.key:hover{
+    /* background-color: rgb(70, 70, 70); */
+    animation-name: button_hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.pes_key{
+    width: 70px;height: 70px;
+    font-size: 30px;
+    border-radius: 70px;
+    background-color: rgb(0, 95, 5);
+    color: white;
+    border: 0px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    animation-name: pes_button_inhover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.pes_key:hover{
+    animation-name: pes_button_hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.result_key{
+    width: 70px;height: 70px;
+    font-size: 30px;
+    border-radius: 70px;
+    background-color: rgb(0, 73, 95);
+    color: white;
+    border: 0px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    animation-name: result_button_inhover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.result_key:hover{
+    animation-name: result_button_hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.ac_key{
+    width: 70px;height: 70px;
+    font-size: 30px;
+    border-radius: 70px;
+    background-color: rgb(255, 72, 72);
+    color: white;
+    border: 0px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    animation-name: ac_button_inhover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.ac_key:hover{
+    animation-name: ac_button_hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.input_box{
+    border: 3px solid rgb(143, 143, 143);
+    border-radius: 20px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0);
+    outline: none;
+    margin-bottom: 10px;
+    color: white;
+    font-size:30px;
+    width: 320px;
+}
